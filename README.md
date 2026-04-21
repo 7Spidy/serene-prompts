@@ -1,5 +1,5 @@
 ```markdown
-<div align="center">
+
 
 # 🌿 Serene Prompts
 
