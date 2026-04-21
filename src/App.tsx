@@ -110,6 +110,14 @@ export default function App() {
         </div>
 
       </main>
+
+      {/* Footer */}
+      <footer className="w-full text-center mt-auto pt-8 pb-6">
+        <p className="text-xs text-warmgray/60 tracking-wide">
+          Made with ♥️ by Avi
+        </p>
+      </footer>
+
     </div>
   );
 }
