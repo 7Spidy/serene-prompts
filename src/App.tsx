@@ -47,15 +47,16 @@ export default function App() {
     setTimeout(() => setIsCopied(false), 2000);
   };
 
-  // Initial random prompt on load
   useEffect(() => {
     setCurrentPrompt(getRandomPrompt('Any'));
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 selection:bg-moss/20">
-      <main className="w-full max-w-2xl flex flex-col items-center space-y-12">
-        
+    <div className="min-h-screen flex flex-col p-6 selection:bg-moss/20">
+
+      {/* Main content — grows to fill space and centers its children */}
+      <main className="flex-1 flex flex-col items-center justify-center w-full max-w-2xl mx-auto space-y-12">
+
         {/* Vibe Chips */}
         <nav className="w-full flex flex-wrap justify-center gap-2">
           {VIBES.map((vibe) => (
@@ -98,7 +99,7 @@ export default function App() {
             <RefreshCw className="w-4 h-4 text-moss group-hover:rotate-180 transition-transform duration-500 ease-out" />
             <span>New Prompt</span>
           </button>
-          
+
           <button
             onClick={copyToClipboard}
             className="p-3 bg-white/50 rounded-full hover:bg-white transition-colors duration-300 text-warmgray hover:text-charcoal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-moss focus-visible:ring-offset-2 focus-visible:ring-offset-sand"
@@ -112,7 +113,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full text-center mt-auto pt-8 pb-6">
+      <footer className="w-full text-center pb-2 pt-4">
         <p className="text-xs text-warmgray/60 tracking-wide">
           Made with ♥️ by Avi
         </p>
